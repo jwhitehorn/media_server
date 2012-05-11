@@ -1,0 +1,10 @@
+.DS_Store
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/**/*
+spec/javascripts
+rerun.txt
+public/system
+tmp/
+public/assets
