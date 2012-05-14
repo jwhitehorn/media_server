@@ -2,4 +2,5 @@
  *= require bootstrap
  *= require bootstrap-responsive
  *= require_self
+ *= require bootstrap_and_overrides
 */
