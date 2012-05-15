@@ -30,11 +30,9 @@
           </a>
           <a class="brand" href="#">MediaServer</a>
           <div class="container nav-collapse">
-            <ul class="nav">
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
-            </ul>
+          <form class="navbar-search pull-left" action="">
+            <input type="text" class="search-query span2" placeholder="Search">
+          </form>
           </div><!--/.nav-collapse -->
         </div>
       </div>
@@ -48,7 +46,7 @@
                 <h3>Sidebar</h3>
                 <ul class="nav nav-list">
                   <li class="nav-header">Sidebar</li>
-                  <li><%= link_to "Movies", movies_path %></li>
+                  <li><%= link_to raw("<i class='icon-film'></i>Movies"), movies_path %></li>
                   <li><%= link_to "Link2", "/path2"  %></li>
                   <li><%= link_to "Link3", "/path3"  %></li>
                 </ul>
