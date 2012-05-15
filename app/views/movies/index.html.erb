@@ -1,0 +1,19 @@
+<table class="table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% movies.each do |movie| %>
+    <tr>
+      <td><em><%= truncate movie.name, :length => 60 %></em></td>
+      <td><%= truncate movie.description, :length => 70 %></td>
+      <td><a href="#" class="btn btn-mini">edit</a></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
