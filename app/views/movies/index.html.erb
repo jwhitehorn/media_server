@@ -11,7 +11,7 @@
     <tr>
       <td><em><%= truncate movie.name, :length => 60 %></em></td>
       <td><%= truncate movie.description, :length => 70 %></td>
-      <td><a href="#" class="btn btn-mini">edit</a></td>
+      <td><%= link_to "edit", edit_movie_path(movie), :class => "btn btn-mini" %></td>
     </tr>
     <% end %>
   </tbody>
