@@ -8,6 +8,7 @@ gem 'delayed_job', '~> 3.0.2'
 gem 'thin'
 gem "twitter-bootstrap-rails"
 gem 'decent_exposure'
+gem 'thin'
 
 
 group :assets do
