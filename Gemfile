@@ -4,7 +4,7 @@ gem 'rails', '~> 3.2.0'
 gem 'sqlite3'
 gem 'rb-appscript'
 gem 'json'
-gem 'delayed_job', '~> 3.0.2'
+gem 'delayed_job_active_record'
 gem 'thin'
 gem "twitter-bootstrap-rails"
 gem 'decent_exposure'
