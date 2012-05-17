@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(:version => 20120516021945) do
     t.string   "genre"
     t.string   "description"
     t.integer  "itunes_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end
