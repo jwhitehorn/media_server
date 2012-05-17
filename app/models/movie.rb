@@ -11,7 +11,7 @@ class Movie < ActiveRecord::Base
       track.description = description
     end
   end
-  handle_asynchronously :update_itunes!
+  handle_asynchronously :update_itunes!, :queue => 'itunes'
   
   private
   def possibly_update_itunes
