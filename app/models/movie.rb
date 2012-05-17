@@ -1,5 +1,5 @@
 class Movie < ActiveRecord::Base
-  after_save :possibly_update_itunes
+  after_update :possibly_update_itunes
 
   def update_itunes!
     i = Itunes.new
