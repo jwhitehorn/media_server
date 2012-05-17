@@ -9,6 +9,7 @@ class Movie < ActiveRecord::Base
       next unless track.track_id.to_i == itunes_id
       track.name = name
       track.description = description
+      track.year = year
     end
   end
   handle_asynchronously :update_itunes!, :queue => 'itunes'
