@@ -3,15 +3,13 @@
     <tr>
       <th>Name</th>
       <th>Description</th>
-      <th></th>
     </tr>
   </thead>
   <tbody>
     <% movies.each do |movie| %>
     <tr>
-      <td><em><%= truncate movie.name, :length => 60 %></em></td>
+      <td><em><%=  link_to truncate(movie.name, :length => 60), edit_movie_path(movie) %></em></td>
       <td><%= truncate movie.description, :length => 70 %></td>
-      <td><%= link_to "edit", edit_movie_path(movie), :class => "btn btn-mini" %></td>
     </tr>
     <% end %>
   </tbody>
