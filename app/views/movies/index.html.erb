@@ -1,7 +1,8 @@
-<table class="table-striped">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th>Name</th>
+      <th>Year</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -9,7 +10,8 @@
     <% movies.each do |movie| %>
     <tr>
       <td><em><%=  link_to truncate(movie.name, :length => 60), edit_movie_path(movie) %></em></td>
-      <td><%= truncate movie.description, :length => 70 %></td>
+      <td><%= movie.year %></td>
+      <td><%= truncate movie.description, :length => 60 %></td>
     </tr>
     <% end %>
   </tbody>
