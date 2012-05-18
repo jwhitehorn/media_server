@@ -9,6 +9,7 @@ gem 'thin'
 gem "twitter-bootstrap-rails"
 gem 'decent_exposure'
 gem 'thin'
+gem 'paperclip'
 
 
 group :assets do
