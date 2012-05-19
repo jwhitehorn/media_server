@@ -10,6 +10,7 @@ gem "twitter-bootstrap-rails"
 gem 'decent_exposure'
 gem 'thin'
 gem 'paperclip'
+gem 'handbrake'
 
 
 group :assets do
