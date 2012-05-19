@@ -1,5 +1,7 @@
 class Movie < ActiveRecord::Base
   after_update :possibly_update_itunes
+  
+  has_attached_file :coverart, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 
   def update_itunes!
     i = Itunes.new
