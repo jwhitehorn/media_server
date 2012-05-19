@@ -32,7 +32,14 @@ class ItunesTrack
     itunes_record.artist.set(value)
   end
   
-  #TODO: artworks
+  def coverart
+    f = Tempfile.new('coverart.png')
+    f.close
+    File.open(f.path, "wb").tap do |file|
+      file.write itunes_record.artworks.first.data_.get.data
+      file.rewind
+    end
+  end
   
   def bit_rate
     itunes_record.bit_rate.get
