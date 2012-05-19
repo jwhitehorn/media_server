@@ -41,6 +41,11 @@ class ItunesTrack
     end
   end
   
+  def coverart=(value)
+    data = AE::AEDesc.new(KAE::TypeJPEG, value.read)
+    itunes_record.artworks.first.data_.set(data)
+  end
+  
   def bit_rate
     itunes_record.bit_rate.get
   end

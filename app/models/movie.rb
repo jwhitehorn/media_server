@@ -12,13 +12,14 @@ class Movie < ActiveRecord::Base
       track.name = name
       track.description = description
       track.year = year unless year.nil?
+      track.coverart = File.open(coverart.path, "r") unless coverart.nil?
     end
   end
   handle_asynchronously :update_itunes!, :queue => 'itunes'
   
   private
   def possibly_update_itunes
-    update_itunes! if name_changed? or description_changed?
+    update_itunes! if name_changed? or description_changed? or coverart_changed?
   end
   
 end
