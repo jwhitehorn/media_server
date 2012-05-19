@@ -1,6 +1,7 @@
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
+	    <th></th>
       <th>Name</th>
       <th>Year</th>
       <th>Description</th>
@@ -9,6 +10,7 @@
   <tbody>
     <% movies.each do |movie| %>
     <tr>
+      <td><%= image_tag movie.coverart.url(:thumb) %></td>
       <td><em><%=  link_to truncate(movie.name, :length => 60), edit_movie_path(movie) %></em></td>
       <td><%= movie.year %></td>
       <td><%= truncate movie.description, :length => 60 %></td>
