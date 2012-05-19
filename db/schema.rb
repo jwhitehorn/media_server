@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120519002629) do
+ActiveRecord::Schema.define(:version => 20120519060547) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(:version => 20120519002629) do
     t.string   "coverart_content_type"
     t.integer  "coverart_file_size"
     t.datetime "coverart_updated_at"
+    t.integer  "play_count"
   end
 
 end
