@@ -19,7 +19,7 @@ class Movie < ActiveRecord::Base
   
   private
   def possibly_update_itunes
-    update_itunes! if name_changed? or description_changed? or coverart_changed?
+    update_itunes! if name_changed? or description_changed? or coverart_updated_at_changed?
   end
   
 end
