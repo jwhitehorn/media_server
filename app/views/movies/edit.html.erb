@@ -1,19 +1,22 @@
-<%= image_tag movie.coverart.url(:medium) %>
-
-<%= form_for movie, :class => 'form-horizontal' do |f| %>
-	<fieldset>
-		<label>Name</label>
-		<%= f.text_field :name %>
-	</fieldset>
-	<fieldset>
-		<label>Description</label>
-		<%= f.text_area :description, :class => 'input-xlarge', :rows => 3%>
-	</fieldset>
-  <fieldset>
-    <label>Year</label>
-    <%= f.text_field :year %>
-  </fieldset>
-	<div class="form-actions">
-		<%= f.submit "Update", :class => 'btn btn-primary' %>
-	</div>
-<% end %>
+<div class="row-fluid">
+  <div class="span6">
+	<%= form_for movie, :class => 'form-horizontal' do |f| %>
+		<fieldset>
+			<label>Name</label>
+			<%= f.text_field :name %>
+		</fieldset>
+		<fieldset>
+			<label>Description</label>
+			<%= f.text_area :description, :class => 'input-xlarge', :rows => 3%>
+		</fieldset>
+	  <fieldset>
+	    <label>Year</label>
+	    <%= f.text_field :year %>
+	  </fieldset>
+		<div class="form-actions">
+			<%= f.submit "Update", :class => 'btn btn-primary' %>
+		</div>
+	<% end %>
+  </div>
+   <div class="span6"><%= image_tag movie.coverart.url(:medium) %></div>
+</div>
