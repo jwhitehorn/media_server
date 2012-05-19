@@ -13,7 +13,7 @@
       <td><%= image_tag movie.coverart.url(:thumb) %></td>
       <td><em><%=  link_to truncate(movie.name, :length => 60), edit_movie_path(movie) %></em></td>
       <td><%= movie.year %></td>
-      <td><%= truncate movie.description, :length => 60 %></td>
+      <td><%= truncate movie.description, :length => 160 %></td>
     </tr>
     <% end %>
   </tbody>
