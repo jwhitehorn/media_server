@@ -20,7 +20,7 @@
 	   <div class="span6">
 		  <fieldset>
 		    <label><%= image_tag movie.coverart.url(:medium) %></label>
-		    <%=file_field :movie, :coverart %>
+		    <%= f.file_field :coverart %>
 		  </fieldset>
 	  </div>
 	</div>
